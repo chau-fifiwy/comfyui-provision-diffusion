@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Install AnimateDiff
+# Install AnimateDiff extension
 cd /workspace/ComfyUI/custom_nodes || exit 1
 git clone https://github.com/Kosinkadink/ComfyUI-AnimateDiff.git
 
-# Make checkpoints directory
+# Download checkpoints
 mkdir -p /workspace/ComfyUI/models/checkpoints
 cd /workspace/ComfyUI/models/checkpoints
 
-# Download SD 2.1 768 checkpoint
+# SD 2.1 768 checkpoint
 wget -O v2-1_768-ema-pruned.safetensors "https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.safetensors"
 
-# Download SD 1.5 pruned fp16 checkpoint
-wget -O v1-5-pruned-emaonly-fp16.safetensors "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly-fp16.safetensors"
+# SD 1.5 pruned fp16 checkpoint (Comfy-Org mirror)
+wget -O v1-5-pruned-emaonly-fp16.safetensors "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors"
